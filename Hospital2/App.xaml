@@ -1,0 +1,28 @@
+﻿<Application x:Class="HOSBITAL.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Hospital"
+             StartupUri="Views/Girish.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dictionary/GirisRD.xaml"/>
+                <ResourceDictionary Source="Dictionary/HekimSexsiKabinetRD.xaml"/>
+                <ResourceDictionary Source="Dictionary/QebulRD.xaml"/>
+                <ResourceDictionary Source="Dictionary/QeydiyyatRD.xaml"/>
+                <ResourceDictionary Source="Dictionary/LaboratoriyaRD.xaml"/>
+                <ResourceDictionary Source="Dictionary/MuracietRD.xaml"/>
+                <ResourceDictionary Source="Dictionary/OnlineNovbeRD.xaml"/>
+                <ResourceDictionary Source="Dictionary/PasientSexsiKabinetRD.xaml"/>
+                <ResourceDictionary Source="Dictionary/SualCavabRD.xaml"/>
+                <ResourceDictionary Source="Dictionary/XestelerRD.xaml"/>
+                <ResourceDictionary Source="Dictionary/EnYaxinXestexanaRD.xaml"/>
+                <ResourceDictionary Source="Dictionary/SikayetlerRD.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+          
+        </ResourceDictionary>
+    
+
+    </Application.Resources>
+</Application>

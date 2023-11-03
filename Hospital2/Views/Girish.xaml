@@ -1,0 +1,53 @@
+﻿<Window x:Class="HOSBITAL.Views.Girish"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        xmlns:local="clr-namespace:Hospital.Views"
+        mc:Ignorable="d"
+        Title="Girish" WindowState="Maximized" Height="750" Width="900" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="0.5*"/>
+        </Grid.RowDefinitions>
+        <Border Background="#6b4bb2"/>
+        <Image Source="/Images/ege_hospital.jpg" Grid.Row="1" Opacity="0.3" Stretch="UniformToFill"/>
+
+        <Border Grid.Row="2" Background="#6b4bb2"/>
+        <Label Content="EGE HOSPITAL" Margin="20,0,0,0" Foreground="White" FontWeight="Bold" FontSize="50" VerticalAlignment="Center"/>
+        <fa:ImageAwesome Icon="User" Width="60" HorizontalAlignment="Right" Margin="0 0 220 0" Foreground="#ffffff" />
+        <StackPanel Width="200" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 20 0" >
+            <Label FontFamily="Cambria" Content="Şəxsi Kabinet" Foreground="#ffffff"  FontSize="20" HorizontalAlignment="Center"/>
+            <Button Style="{StaticResource daxilOl}" Content="Daxil ol" BorderBrush="Black" Width="100" Command="{Binding daxilOlCommand}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <fa:ImageAwesome Foreground="OrangeRed" Icon="Phone" Width="50"/>
+                <StackPanel Margin="10 0 0 0">
+                    <Label Foreground="OrangeRed" Content="ƏLAQƏ" FontWeight="Bold" FontSize="20"/>
+                    <Label Foreground="OrangeRed" Content="012 567 20 00"/>
+                </StackPanel>
+            </StackPanel>
+           
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <fa:ImageAwesome Foreground="OrangeRed" Icon="LocationArrow"  Width="50"/>
+                <Button Content="Ünvan" 
+                        Style="{StaticResource unvanBtn}" 
+                        Command="{Binding enYaxinXestexanaCommand}" 
+                        Margin="0 2 0 0" Background="Transparent" 
+                        Width="100"
+                        FontWeight="Bold" 
+                        FontSize="20"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Orientation="Horizontal"  HorizontalAlignment="Center">
+            <Button Content="HAQQIMIZDA" Style="{StaticResource footerGiris}" Command="{Binding haqqimizdaCommand}"/>
+         
+            <Button Content="HƏKİMLƏR"  Style="{StaticResource footerGiris}" Command="{Binding hekimlerCommand}"/>
+        </StackPanel>
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.Row="1"/>
+    </Grid>
+</Window>

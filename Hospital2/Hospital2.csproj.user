@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Pages\EnYaxinXestexana.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Pages\Sikayetler.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Haqqimizda.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Dictionary\EnYaxinXestexanaRD.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Dictionary\SikayetlerRD.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Dictionary\XestelerRD.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\EnYaxinXestexana.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Pages\Sikayetler.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Haqqimizda.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

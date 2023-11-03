@@ -1,0 +1,62 @@
+﻿<Window x:Class="Hospital2.Views.Haqqimizda"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+        xmlns:local="clr-namespace:Hospital2.Views"
+        mc:Ignorable="d"
+        Title="Haqqimizda" Height="450" Width="800" WindowState="Maximized" ScrollViewer.VerticalScrollBarVisibility="Auto" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image 
+            Source="/Images/ege_hospital.jpg" 
+            Stretch="UniformToFill"
+            Opacity="0.3"/>
+        <StackPanel 
+            Orientation="Vertical" 
+            VerticalAlignment="Center"
+            Margin="20,0,0,0">
+            <TextBlock 
+                Text="Home/Haqqımızda"
+                FontSize="15"
+                FontFamily="/Fonts/#Sulphur Point"
+                Margin="0,0,0,0"/>
+            <TextBlock 
+            Text="Haqqımızda"
+            VerticalAlignment="Center"
+            FontFamily="/Fonts/#Sulphur Point"
+            Margin="0,15,0,0"
+            FontSize="35"
+            />
+            <Border  
+                BorderBrush="red" 
+                BorderThickness="1" 
+                Width="35"
+                Margin="0,5,0,0"
+                HorizontalAlignment="Left"/>
+
+        </StackPanel>
+        <TextBlock Text="Həsən Əliyev 38 ünvanında yerləşən və 12 mərtəbəli korpusdan ibarət EGE Hospital vətəndaşlarımıza yüksək keyfiyyət, güvən və davamlılığı bir arada təqdim etmək məqsədilə xidmətinizdədir. Dünya standartlarına uyğun tibbi xidməti ölkəmizdə tətbiq edən EGE Hospital peşəkar həkimlərin, bilik və təcrübələrini səmimi şəkildə paylaşan tibbi heyətin, düzgün keyfiyyət strategiyasının, ən müasir tibb texnologiyası ilə keyfiyyətli tibbi xidmətə hər tərəfli təminat yaradır.
+
+Düzgün müayinə və müalicə üçün ölkə xaricinə çıxmağa ehtiyac yoxdur. Ege Hospital uzaq yolları yaxın edir!
+
+Sağlamlığınız Sağlamlığımızdır!" Grid.Row="1" TextWrapping="Wrap" Width="600"
+                   HorizontalAlignment="Left" Margin="20,50,0,0" FontFamily="/Fonts/#Sulphur Point"/>
+        <StackPanel Orientation="Vertical" Grid.Row="1">
+
+            <wv2:WebView2
+                    Visibility="Visible"
+                      x:Name="mediaElement"
+                      Grid.Row="1"
+                      HorizontalAlignment="Right"
+                      Width="460" Height="280"
+                      Margin="0,20,20,0"
+                      Source="https://www.youtube.com/embed/YSFLPpp59TU"
+               />
+        </StackPanel>
+    </Grid>
+</Window>

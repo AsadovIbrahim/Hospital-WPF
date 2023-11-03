@@ -1,0 +1,68 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\OFL.txt" />
+    <None Remove="Fonts\SulphurPoint-Bold.otf" />
+    <None Remove="Fonts\SulphurPoint-Light.otf" />
+    <None Remove="Fonts\SulphurPoint-Regular.otf" />
+    <None Remove="Images\5noxestexana.jpg" />
+    <None Remove="Images\complaints.png" />
+    <None Remove="Images\department.png" />
+    <None Remove="Images\EgeHospital.jpg" />
+    <None Remove="Images\ege_hospital.jpg" />
+    <None Remove="Images\HBGuven.jpg" />
+    <None Remove="Images\IstanbulNS.jpg" />
+    <None Remove="Images\laboratory.png" />
+    <None Remove="Images\measures.png" />
+    <None Remove="Images\MederaHospital.jpg" />
+    <None Remove="Images\MedicalPlaza.jpg" />
+    <None Remove="Images\operate.png" />
+    <None Remove="Images\patients.png" />
+    <None Remove="Images\profile.png" />
+    <None Remove="Images\question.png" />
+    <None Remove="Images\queue.png" />
+    <None Remove="Images\registration.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="UserControls\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FontAwesome.WPF" Version="4.7.0.9" />
+    <PackageReference Include="Microsoft.Maps.MapControl.WPF" Version="1.0.0.3" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.1901.177" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\OFL.txt" />
+    <Resource Include="Fonts\SulphurPoint-Bold.otf" />
+    <Resource Include="Fonts\SulphurPoint-Light.otf" />
+    <Resource Include="Fonts\SulphurPoint-Regular.otf" />
+    <Resource Include="Images\5noxestexana.jpg" />
+    <Resource Include="Images\complaints.png" />
+    <Resource Include="Images\department.png" />
+    <Resource Include="Images\EgeHospital.jpg" />
+    <Resource Include="Images\ege_hospital.jpg" />
+    <Resource Include="Images\HBGuven.jpg" />
+    <Resource Include="Images\IstanbulNS.jpg" />
+    <Resource Include="Images\laboratory.png" />
+    <Resource Include="Images\measures.png" />
+    <Resource Include="Images\MederaHospital.jpg" />
+    <Resource Include="Images\MedicalPlaza.jpg" />
+    <Resource Include="Images\operate.png" />
+    <Resource Include="Images\patients.png" />
+    <Resource Include="Images\profile.png" />
+    <Resource Include="Images\question.png" />
+    <Resource Include="Images\queue.png" />
+    <Resource Include="Images\registration.png" />
+  </ItemGroup>
+
+</Project>

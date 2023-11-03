@@ -1,0 +1,169 @@
+﻿<Page x:Class="Hospital.Pages.Online_novbe"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Hospital.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Online_novbe">
+
+    <Grid>
+        <ScrollViewer>
+            <Border ScrollViewer.VerticalScrollBarVisibility="Visible" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Center" Width="400" Height="530" Margin="0,10,0,0">
+                <StackPanel  Background="#C8d3e0" >
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Analiz növü" Style="{StaticResource Style}"/>
+                        <Button Style="{StaticResource Close}" Content="X" FontSize="11" Margin="195,0,0,0" FontWeight="ExtraBold" Command="{Binding Close_command}"/>
+                    </StackPanel>
+
+                    <ComboBox x:Name="analizNovu" Width="340" Height="40" SelectedItem="{Binding xesteMuracieti.analizNovu}">
+                        <ComboBox.Resources>
+                            <Style TargetType="ComboBoxItem">
+                                <Setter Property="Foreground" Value="Black" />
+                            </Style>
+                        </ComboBox.Resources>
+                        <ComboBox.ItemsSource>
+                            <x:Array Type="{x:Type sys:String}" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                                <sys:String>Sitoloji ve Patoloji</sys:String>
+                                <sys:String>Bakteroloji</sys:String>
+                                <sys:String>Histoloji</sys:String>
+                                <sys:String>PCR analizler</sys:String>
+                                <sys:String>Klinik analizler</sys:String>
+                                <sys:String>Biokimyevi analizler</sys:String>
+                            </x:Array>
+                        </ComboBox.ItemsSource>
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <ComboBoxItem>
+                                    <TextBlock Text="{Binding}"/>
+                                </ComboBoxItem>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+
+
+                    </ComboBox>
+                    <Label Content="Gun" Style="{StaticResource Style}"/>
+
+                    <ComboBox Name="gun" Width="340" Height="40" SelectedItem="{Binding xesteMuracieti.gun}">
+                        <ComboBox.Resources>
+                            <Style TargetType="ComboBoxItem">
+                                <Setter Property="Foreground" Value="Black" />
+                            </Style>
+                        </ComboBox.Resources>
+                        <ComboBox.ItemsSource>
+                            <x:Array Type="{x:Type sys:String}" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                                <sys:String>Bazar ertesi</sys:String>
+                                <sys:String>Cersembe axsami</sys:String>
+                                <sys:String>Cersembe</sys:String>
+                                <sys:String>Cume axsami</sys:String>
+                                <sys:String>Cume</sys:String>
+                                <sys:String>Senbe</sys:String>
+                                <sys:String>Bazar</sys:String>
+                            </x:Array>
+                        </ComboBox.ItemsSource>
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <ComboBoxItem>
+                                    <TextBlock Text="{Binding}"/>
+                                </ComboBoxItem>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+
+
+                    </ComboBox>
+
+                    <Label Content="Saat" Style="{StaticResource Style}"/>
+
+                    <ComboBox x:Name="saat" Width="340" Height="40" SelectedItem="{Binding xesteMuracieti.saat}">
+                        <ComboBox.Resources>
+                            <Style TargetType="ComboBoxItem">
+                                <Setter Property="Foreground" Value="Black" />
+                            </Style>
+                        </ComboBox.Resources>
+                        <ComboBox.ItemsSource>
+                            <x:Array Type="{x:Type sys:String}" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                                <sys:String>9:00-12:00</sys:String>
+                                <sys:String>12:05:15:00</sys:String>
+                                <sys:String>15:05:18:00</sys:String>
+
+                            </x:Array>
+                        </ComboBox.ItemsSource>
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <ComboBoxItem>
+                                    <TextBlock Text="{Binding}"/>
+                                </ComboBoxItem>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+
+
+                    </ComboBox>
+                    
+                    <Label Content="Muaine" Style="{StaticResource Style}"/>
+
+                    <ComboBox x:Name="muaine" Width="340" Height="40" SelectedItem="{Binding xesteMuracieti.muaine}">
+                        <ComboBox.Resources>
+                            <Style TargetType="ComboBoxItem">
+                                <Setter Property="Foreground" Value="Black" />
+                            </Style>
+                        </ComboBox.Resources>
+                        <ComboBox.ItemsSource>
+                            <x:Array Type="{x:Type sys:String}" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                                <sys:String>Dermatoloq</sys:String>
+                                <sys:String>Lor</sys:String>
+                                <sys:String>Kardioloq</sys:String>
+                                <sys:String>Stamotoloq</sys:String>
+                                <sys:String>Uroloq</sys:String>
+                                <sys:String>Endokrinoloq</sys:String>
+                                <sys:String>Terapevt</sys:String>
+
+                            </x:Array>
+                        </ComboBox.ItemsSource>
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <ComboBoxItem>
+                                    <TextBlock Text="{Binding}"/>
+                                </ComboBoxItem>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+
+
+                    </ComboBox>
+                    <StackPanel>
+                        <Label Content="Hekim" Style="{StaticResource Style}"/>
+
+                        <ComboBox x:Name="hekim" Width="340" Height="40" SelectedItem="{Binding xesteMuracieti.hekim}">
+                            <ComboBox.Resources>
+                                <Style TargetType="ComboBoxItem">
+                                    <Setter Property="Foreground" Value="Black" />
+                                </Style>
+                            </ComboBox.Resources>
+                            <ComboBox.ItemsSource>
+                                <x:Array Type="{x:Type sys:String}" xmlns:sys="clr-namespace:System;assembly=mscorlib">
+                                    <sys:String>Uzman Sahin Ezizov</sys:String>
+                                    <sys:String>Uzman Xursud Huseynova</sys:String>
+                                    <sys:String>Uzman Veli Ceferov</sys:String>
+                                    <sys:String>Uzman Aygun Abdullayeva</sys:String>
+                                    <sys:String>Uzman Fuad Eliyev</sys:String>
+
+                                </x:Array>
+                            </ComboBox.ItemsSource>
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <ComboBoxItem>
+                                        <TextBlock Text="{Binding}"/>
+                                    </ComboBoxItem>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
+
+
+                        </ComboBox>
+                        <Button Style="{StaticResource qeydiyyat}" Command="{Binding tamamlaCommand}" Content="Tamamla" Background="#3766a0" >
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </ScrollViewer>
+    </Grid>
+</Page>

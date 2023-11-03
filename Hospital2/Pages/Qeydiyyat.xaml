@@ -1,0 +1,48 @@
+﻿<Page x:Class="Hospital.Pages.Qeydiyyat"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Hospital.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="650" d:DesignWidth="800"
+      Title="Qeydiyyat">
+
+    <Grid>
+        <Border Panel.ZIndex="1"  BorderThickness="1"  BorderBrush="Black" Width="400" Height="440">
+            <ScrollViewer>
+                <StackPanel   Background="#C8d3e0" ScrollViewer.VerticalScrollBarVisibility="Visible" >
+                    <Label Content="Adiniz" Style="{StaticResource Style}"/>
+                    <TextBox x:Name="nameTxtBox" Text="{Binding pasient.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource StyleT1}"/>
+                    <Label Content="Soyadiniz" Style="{StaticResource Style}"/>
+                    <TextBox x:Name="surnameTxtBox" Text="{Binding pasient.Surname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource StyleT1}"/>
+                    <Label Content="Ata adi" Style="{StaticResource Style}"/>
+                    <TextBox x:Name="fathersnameTxtBox" Text="{Binding pasient.fathersName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource StyleT1}"/>
+                    <Label Content="Doğum darixi" Style="{StaticResource Style}"/>
+                    <TextBox x:Name="birthdayTxtBox" Text="{Binding pasient.birthday,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource StyleT1}"/>
+                    <Label Content="Səxsiyyətin seriası" Style="{StaticResource Style}"/>
+                    <TextBox x:Name="seriyaIdTxtBox" Text="{Binding pasient.seriyaID,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource StyleT1}"/>
+                    <Label Content="Cinsiniz" Style="{StaticResource Style}"/>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Kişi" Style="{StaticResource Style}"/>
+                        <RadioButton x:Name="maleradiobtn" Margin="0 13 0 0" Command="{Binding male}"/>
+                        <Label Content="Qadin" Style="{StaticResource Style}"/>
+                        <RadioButton x:Name="femaleradiobtn" Margin="0 13 0 0" Command="{Binding female}"/>
+                    </StackPanel>
+                    <Label Content="Əlaqə nömrəsi" Style="{StaticResource Style}"/>
+                    <TextBox x:Name="numberTxtBox" Text="{Binding pasient.Number,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource StyleT1}"/>
+                    <Label Content="Mail" Style="{StaticResource Style}"/>
+                    <TextBox x:Name="mailTxtBox" Text="{Binding pasient.Mail,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource StyleT1}"/>
+                    <Label Content="Parol təyin edin" Style="{StaticResource Style}"/>
+                    <TextBox x:Name="passwordTxtBox" Text="{Binding pasient.Password,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource StyleT1}"/>
+                    <Label Content="Parol yeniden daxil edin" Style="{StaticResource Style}"/>
+                    <TextBox x:Name="againpasswordTxtBox" Text="{Binding pasient.againPassword,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource StyleT1}"/>
+
+                    <Button  Style="{StaticResource qeydiyyat}"   Width="200" Height="50" BorderThickness="2" Content="Qeydiyyatdan Kec" Foreground="#fff" Command="{Binding QeydiyyatCommand}"/>
+
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+        <Frame x:Name="MainFrame" NavigationUIVisibility="Visible" />
+    </Grid>
+</Page>
